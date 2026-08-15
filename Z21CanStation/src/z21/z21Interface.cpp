@@ -56,7 +56,7 @@ void z21Interface::receive(uint8_t client, uint8_t *packet)
 		data[1] = (serialNumber >> 8) & 0xFF;
 		data[2] = 0x00;
 		data[3] = 0x00;
-		EthSend(client, 0x08, z21Interface::Header::LAN_GET_SERIAL_NUMBER, data, false, static_cast<uint16_t>(BcFlagShort::Z21bcNone)); // Seriennummer 32 Bit (little endian)
+		EthSend(client, 0x08, z21Interface::Header::LAN_GET_SERIAL_NUMBER_RETURN, data, false, static_cast<uint16_t>(BcFlagShort::Z21bcNone)); // Seriennummer 32 Bit (little endian)
 	}
 	break;
 	case z21Interface::Header::LAN_GET_HWINFO:

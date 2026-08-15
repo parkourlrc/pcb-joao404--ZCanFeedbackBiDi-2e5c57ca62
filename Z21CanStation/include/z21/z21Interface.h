@@ -58,6 +58,7 @@ protected:
 	enum class Header : uint16_t
 	{
 		LAN_GET_SERIAL_NUMBER = 0x10,
+		LAN_GET_SERIAL_NUMBER_RETURN = 0x12,
 		LAN_LOGOFF = 0x30,
 		LAN_X_HEADER = 0x40,
 		LAN_SET_BROADCASTFLAGS = 0x50,

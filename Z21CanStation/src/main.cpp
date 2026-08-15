@@ -38,7 +38,7 @@ std::shared_ptr<CanInterfaceEsp32> canInterface = std::make_shared<CanInterfaceE
 
 const uint16_t hash{0};
 const uint32_t serialNumber{0xFFFFFFF0};
-const uint16_t swVersion{0x0142};
+const uint16_t swVersion{0x0143};
 const int16_t z21Port{21105};
 
 std::shared_ptr<UdpInterfaceEsp32> udpInterface = std::make_shared<UdpInterfaceEsp32>(30, z21Port, false);
