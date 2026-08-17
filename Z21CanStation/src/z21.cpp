@@ -141,9 +141,13 @@ void z21::dcc()
   }
 }
 
-void z21::update(Observable &observable, void *data)
+void z21::update(Observable<Can::Message> &observable, Can::Message *data)
 {
   ZCanInterfaceObserver::update(observable, data);
+}
+
+void z21::update(Observable<Udp::Message> &observable, Udp::Message *data)
+{
   z21InterfaceObserver::update(observable, data);
 }
 

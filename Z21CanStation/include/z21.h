@@ -55,7 +55,9 @@ public:
 
     void dcc();
 
-    void update(Observable &observable, void *data) override;
+    void update(Observable<Can::Message> &observable, Can::Message *data) override;
+
+    void update(Observable<Udp::Message> &observable, Udp::Message *data) override;
 
     void deleteLocoConfig();
 

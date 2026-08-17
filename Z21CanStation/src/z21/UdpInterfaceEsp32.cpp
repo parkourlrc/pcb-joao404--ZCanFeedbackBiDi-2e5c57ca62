@@ -62,13 +62,13 @@ void UdpInterfaceEsp32::handlePacket(uint8_t client, uint8_t *packet, size_t pac
       {
         break;
       }
-      UdpMessage udpMessage{client, &(packet[index])};
+      Udp::Message udpMessage{client, &(packet[index])};
       notify(&udpMessage);
     }
   }
 }
 
-bool UdpInterfaceEsp32::transmit(UdpMessage &message)
+bool UdpInterfaceEsp32::transmit(Udp::Message &message)
 {
   // send data now via new interface using transmit function
 
@@ -117,7 +117,7 @@ bool UdpInterfaceEsp32::transmit(UdpMessage &message)
   return false;
 }
 
-bool UdpInterfaceEsp32::receive(UdpMessage &message)
+bool UdpInterfaceEsp32::receive(Udp::Message &message)
 {
   return false;
 }
